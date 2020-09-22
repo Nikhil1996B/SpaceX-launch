@@ -13,6 +13,10 @@
   background-color: #9acd32;
 }
 
+.select {
+  background-color: #ccff99;
+}
+
 .years {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
