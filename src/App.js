@@ -14,11 +14,19 @@ function App() {
     return () => {};
   }, []);
 
+  const selectedYear = (year) => {
+    console.log("selected launch year", year);
+    fetch(`https://api.spaceXdata.com/v3/launches?limit=8&launch_year=${year}`)
+      .then((res) => res.json())
+      .then((data) => setAllLaunch(data))
+      .catch((e) => console.log(e));
+  };
+
   return (
     <>
       <div className="spacex-landing-container">
-        <Filter allLaunch={allLaunch}/>
-        <LaunchTile />
+        <Filter allLaunch={allLaunch} selectedYear={selectedYear} />
+        <LaunchTile allLaunch={allLaunch} />
       </div>
     </>
   );

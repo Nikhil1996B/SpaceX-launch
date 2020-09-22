@@ -34,7 +34,6 @@ ul {
 }
 /* Filter */
 .filter-container {
-  border: 1px solid #000;
   order: 1;
   flex: 2;
 }
@@ -74,7 +73,8 @@ ul {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 180px;
+  text-align: center;
+  height: 302px;
   width: 100%;
 }
 
@@ -103,7 +103,6 @@ ul {
 }
 
 .launch-program-container {
-  border: 1px solid #000;
   order: 2;
   flex: 12;
   display: flex;
@@ -114,7 +113,6 @@ ul {
 .launch-program-list-item {
   flex: 1 0 24%;
   min-height: 40vh;
-  border: 1px solid #000;
 }
 
 /* Developer name section */
@@ -148,12 +146,10 @@ ul {
     justify-content: space-between;
   }
   .filter-container {
-    border: 1px solid #000;
     order: 1;
     flex: 2;
   }
   .launch-program-container {
-    border: 1px solid #000;
     order: 2;
     flex: 12;
     display: flex;
@@ -164,7 +160,6 @@ ul {
   .launch-program-list-item {
     flex: 1 0 50%;
     min-height: 40vh;
-    border: 1px solid #000;
   }
 }
 

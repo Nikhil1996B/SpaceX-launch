@@ -1,0 +1,122 @@
+/* Global styles */
+:root {
+  --primary-color: #f2f2f2;
+  --primary-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: var(--primary-color);
+}
+
+h1,
+h2,
+h3 {
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+p {
+  font-weight: 550;
+  padding: 10px 0 10px 0;
+}
+
+/* Successful launch section */
+.success-launch,
+.success-landing {
+  margin: 2px;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px 2px 2px 2px;
+}
+
+.launch-program-container {
+  order: 2;
+  flex: 12;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.missionpatch {
+  height: 240px;
+  width: 260px;
+  background: var(--primary-color);
+}
+.launch-program-list-item {
+  background: var(--primary-white);
+  flex: 1 0 24%;
+  min-height: 40vh;
+  margin: 0 5px 10px 5px;
+}
+.launch-program-inner {
+  text-align: center;
+  padding: 16px 2px;
+  margin: 2px;
+}
+/* Developer name section */
+.developer-name {
+  font-size: 12px;
+  text-align: center;
+}
+
+.flightpatchcontent {
+  margin-left: 40px;
+}
+.flightdescription {
+  font-weight: 550;
+  color: lightskyblue;
+}
+
+/* Mobile screen */
+@media screen and (max-width: 700px) {
+  .spacex-landing-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+  .launch-program-container {
+    display: flex;
+    flex-flow: column;
+  }
+  .launch-program-list-item {
+    flex: 1 0 50%;
+  }
+}
+
+/* Tablet view */
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .spacex-landing-container {
+    display: flex;
+    min-height: 80vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .filter-container {
+    order: 1;
+    flex: 2;
+  }
+  .launch-program-container {
+    order: 2;
+    flex: 12;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .launch-program-list-item {
+    flex: 1 0 50%;
+    min-height: 40vh;
+  }
+}
+
+/* Desktop-view view */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+}
