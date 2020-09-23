@@ -31,28 +31,39 @@ function App() {
         if (landSuccess != "") {
           URL = `${URL}&launch_year=${launchYear}&launch_success=${launchSuccess}&landSuccess=${landSuccess}`;
           fetchPatches(URL);
+        } else {
+          URL = `${URL}&launch_year=${launchYear}&launch_success=${launchSuccess}`;
+          fetchPatches(URL);
         }
-        URL = `${URL}&launch_year=${launchYear}&launch_success=${launchSuccess}`;
-        fetchPatches(URL);
       } else {
         URL = `${URL}&launch_year=${launchYear}`;
         fetchPatches(URL);
       }
+    } else if (launchSuccess != "") {
+      if (landSuccess != "") {
+        URL = `${URL}&land_success=${landSuccess}&launch_success=${launchSuccess}`;
+        fetchPatches(URL);
+      } else {
+        URL = `${URL}&land_success=${landSuccess}`;
+        fetchPatches(URL);
+      }
     }
-    return () => {};
-  }, [launchYear, launchSuccess, landSuccess]);
+    return () => {
+      URL = "https://api.spaceXdata.com/v3/launches?limit=8";
+    };
+  }, [launchSuccess, landSuccess, launchYear]);
 
   const selectedYear = (year) => {
     console.log("selected launch year", year);
     setLaunchYear(year);
   };
 
-  const launchFIlter = (launch) => {
+  const launchFIlter = (launch = "") => {
     setLaunchType(launch);
     console.log(launch);
   };
 
-  const landFilter = (land) => {
+  const landFilter = (land = "") => {
     setLandType(land);
     console.log(land);
   };

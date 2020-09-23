@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import filterLaunch, { years } from "./selector";
 import style from "./style.css";
 
 function Filter({ selectedYear, launchFIlter, landFilter }) {
   // const [launchFilter, setLaunchFilter] = useState([]);
   const [selectedLaunchYear, setSelectedYearFlter] = useState("1");
-  const [launchTypeSuccess, setlaunchSuccess] = useState("1");
-  const [landSuccess, setlandSuccess] = useState("1");
+  const [launchTypeSuccess, setlaunchSuccess] = useState("false");
+  const [landSuccess, setlandSuccess] = useState("false");
 
   const launchYear = years.map((year, index) => (
     <>
@@ -67,7 +67,7 @@ function Filter({ selectedYear, launchFIlter, landFilter }) {
       <div className="launch-result">
         {" "}
         <button
-          className={landSuccess == "true" ? "select" : "btn"}
+          className={launchTypeSuccess == "true" ? "select" : "btn"}
           id="true"
           onClick={() => {
             launchFIlter("true");
@@ -77,11 +77,11 @@ function Filter({ selectedYear, launchFIlter, landFilter }) {
           True
         </button>
         <button
-          className={landSuccess == "true" ? "select" : "btn"}
+          className={launchTypeSuccess == "true" ? "select" : "btn"}
           id="false"
           onClick={() => {
             setlaunchSuccess("true");
-            launchFIlter("true");
+            launchFIlter("false");
           }}
         >
           False

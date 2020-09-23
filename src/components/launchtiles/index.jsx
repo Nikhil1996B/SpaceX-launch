@@ -4,7 +4,6 @@ import style from "./style.css";
 function LaunchTile({ allLaunch }) {
   return (
     <>
-      {console.log("from launch tiles", JSON.stringify(allLaunch))}
       <section className="launch-program-container">
         {allLaunch.length > 0 ? (
           allLaunch.map((launches, index) => (
