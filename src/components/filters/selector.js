@@ -25,6 +25,11 @@ export const years = [
   { year: "2019", id: "13", isSelected: false },
 ];
 
+export const launchLand = [
+  { type: "true", id: "1" },
+  { type: "false", id: "2" },
+];
+
 export const selectedFilters = (year, launch, landing) => {
   __filterYear = year;
   __filterLaunch = launch;

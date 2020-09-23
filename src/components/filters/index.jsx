@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import filterLaunch, { years } from "./selector";
+import filterLaunch, { years, launchLand } from "./selector";
 import style from "./style.css";
 
 function Filter({ selectedYear, launchFIlter, landFilter }) {
@@ -26,66 +26,55 @@ function Filter({ selectedYear, launchFIlter, landFilter }) {
     </>
   ));
 
-  const constLanding = (
-    <>
-      {" "}
-      <div className="landingfiltersection">
-        <p className="filterTitle">Successful Landing</p>
-        <hr />
-      </div>
-      <div className="landing-result">
-        <button
-          className={landSuccess == "true" ? "select" : "btn"}
-          id="true"
-          onClick={() => {
-            landFilter("true");
-            setlandSuccess("true");
-          }}
-        >
-          True
-        </button>
-        <button
-          className={landSuccess == "true" ? "select" : "btn"}
-          id="false"
-          onClick={() => {
-            landFilter("false");
-            setlandSuccess("true");
-          }}
-        >
-          False
-        </button>
-      </div>
-    </>
-  );
-
   const launchSuccess = (
     <>
       <div className="landingfiltersection">
         <p className="filterTitle">Successful Launch</p>
         <hr />
       </div>
-      <div className="launch-result">
-        {" "}
-        <button
-          className={launchTypeSuccess == "true" ? "select" : "btn"}
-          id="true"
-          onClick={() => {
-            launchFIlter("true");
-            setlaunchSuccess("true");
-          }}
-        >
-          True
-        </button>
-        <button
-          className={launchTypeSuccess == "true" ? "select" : "btn"}
-          id="false"
-          onClick={() => {
-            setlaunchSuccess("true");
-            launchFIlter("false");
-          }}
-        >
-          False
-        </button>
+      <div className="landing-result">
+        <div className="success">
+          {launchLand.map((success, index) => (
+            <button
+              key={index}
+              className={launchTypeSuccess == "true" ? "select" : "btn"}
+              id="true"
+              onClick={() => {
+                launchFIlter(success.type);
+                setlaunchSuccess("true");
+              }}
+            >
+              {success.type}
+            </button>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+
+  const landing = (
+    <>
+      <div className="landingfiltersection">
+        <p className="filterTitle">Successful Landing</p>
+        <hr />
+      </div>
+
+      <div className="landing-result">
+        <div className="success">
+          {launchLand.map((success, index) => (
+            <button
+              key={index}
+              className={landSuccess == "true" ? "select" : "btn"}
+              id="true"
+              onClick={() => {
+                landFilter(success.type);
+                setlandSuccess("true");
+              }}
+            >
+              {success.type}
+            </button>
+          ))}
+        </div>
       </div>
     </>
   );
@@ -105,7 +94,7 @@ function Filter({ selectedYear, launchFIlter, landFilter }) {
             </div>
           </div>
           <div className="success-launch">{launchSuccess}</div>
-          <div className="success-landing">{constLanding}</div>
+          <div className="success-landing">{landing}</div>
         </div>
       </section>
     </>
