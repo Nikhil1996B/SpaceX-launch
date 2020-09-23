@@ -20,5 +20,12 @@ src
 |--components //components folder within which all components are placed
 |  |--fliters
 |  |--launchtiles
-|--HTTP //Will contain only http request response logic
 
+. .....
+...
+```
+
+
+##Unit testing
+###Libraries for unit testing
+- `jest`
