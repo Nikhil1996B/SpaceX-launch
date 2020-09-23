@@ -20,7 +20,16 @@ function LaunchTile({ allLaunch }) {
                 <p className="flightdescription">
                   {launches.mission_name}#{launches.flight_number}
                 </p>
-                <p>Misison Ids:</p>
+                {launches.mission_id.length > 0 ? (
+                  <>
+                    <p>Misison Ids:</p>
+                    {launches.mission_id.map((ids) => (
+                      <ul>
+                        <li key={ids}>{ids}</li>
+                      </ul>
+                    ))}
+                  </>
+                ) : null}
                 <p>
                   <span>Launch Year: </span> {launches.launch_year}
                 </p>
