@@ -1,7 +1,7 @@
 .years button,
 .launch-result button,
 .landing-result button {
-  background: #ccff99;
+  background: #96cb7f;
   border-radius: 4px;
   height: 22px;
   width: 52px;
@@ -10,11 +10,12 @@
 }
 .active,
 .btn:hover {
-  background-color: #9acd32;
+  background-color: #96cb7f;
 }
 
 .select {
-  background-color: #ccff99;
+  background-color: #56a543;
+  border: none;
 }
 
 .years {
@@ -77,7 +78,7 @@
 .filterTitle {
   padding-bottom: 3px;
 }
-.success{
+.success {
   display: flex;
-    justify-content: space-around;
+  justify-content: space-around;
 }

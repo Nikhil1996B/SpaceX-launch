@@ -3,7 +3,6 @@ import filterLaunch, { years, launchLand } from "./selector";
 import style from "./style.css";
 
 function Filter({ selectedYear, launchFIlter, landFilter }) {
-  // const [launchFilter, setLaunchFilter] = useState([]);
   const [selectedLaunchYear, setSelectedYearFlter] = useState("1");
   const [launchTypeSuccess, setlaunchSuccess] = useState("false");
   const [landSuccess, setlandSuccess] = useState("false");
@@ -101,4 +100,4 @@ function Filter({ selectedYear, launchFIlter, landFilter }) {
   );
 }
 
-export default Filter;
+export default React.memo(Filter);
