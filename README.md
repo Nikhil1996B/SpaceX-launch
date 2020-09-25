@@ -29,3 +29,8 @@ src
 ##Unit testing
 ###Libraries for unit testing
 - `jest`
+
+
+Lighthouse score for performance, SEO and accesibilty
+![GitHub Logo](SpaceXwebsiteSeo.png)
+Format: ![Alt Text](url)
