@@ -83,7 +83,7 @@ function Filter({ selectedYear, launchFIlter, landFilter }) {
     <>
       <section className={style.filtercontainer}>
         <div className="filter-box">
-          <h4>Filters</h4>
+          <h1>Filters</h1>
           <div className="launch-year">
             <p className="filterTitle">Launch Year</p>
             <hr />
