@@ -32,5 +32,5 @@ src
 
 
 Lighthouse score for performance, SEO and accesibilty
-![GitHub Logo](SpaceXwebsiteSeo.png)
+![GitHub Logo](SpacexReport.png)
 Format: ![Alt Text](url)
