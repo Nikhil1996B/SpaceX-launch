@@ -78,21 +78,6 @@ ul {
   width: 100%;
 }
 
-.years button,
-.launch-result button,
-.landing-result button {
-  background: #ccff99;
-  border-radius: 4px;
-  height: 22px;
-  width: 52px;
-  text-align: center;
-  border: 1px solid white;
-}
-.active,
-.btn:hover {
-  background-color: #9acd32;
-}
-
 /* Successful launch section */
 .success-launch,
 .success-landing {
@@ -133,7 +118,10 @@ ul {
     flex-flow: column;
   }
   .launch-program-list-item {
-    flex: 1 0 50%;
+    flex: 100%;
+  }
+  .flightpatchcontent {
+    text-align: center;
   }
 }
 
@@ -156,13 +144,19 @@ ul {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-
   .launch-program-list-item {
-    flex: 1 0 50%;
-    min-height: 40vh;
+    flex: 40%;
+  }
+  .flightpatchcontent {
+    text-align: initial;
+    margin-left: 25px;
   }
 }
 
 /* Desktop-view view */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .flightpatchcontent {
+    /* margin-left: 40px; */
+    text-align: center;
+  }
 }

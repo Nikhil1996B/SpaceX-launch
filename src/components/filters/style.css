@@ -10,11 +10,11 @@
 }
 .active,
 .btn:hover {
-  background-color: #96cb7f;
+  background-color: #56a543;
 }
 
 .select {
-  background-color: #56a543;
+  background-color: #56a543 !important;
   border: none;
 }
 

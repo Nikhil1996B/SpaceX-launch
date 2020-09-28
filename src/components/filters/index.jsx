@@ -36,11 +36,11 @@ function Filter({ selectedYear, launchFIlter, landFilter }) {
           {launchLand.map((success, index) => (
             <button
               key={index}
-              className={launchTypeSuccess == "true" ? "select" : "btn"}
+              className={launchTypeSuccess == success.id ? "select" : "btn"}
               id="true"
               onClick={() => {
                 launchFIlter(success.type);
-                setlaunchSuccess("true");
+                setlaunchSuccess(success.id);
               }}
             >
               {success.type}
@@ -63,11 +63,11 @@ function Filter({ selectedYear, launchFIlter, landFilter }) {
           {launchLand.map((success, index) => (
             <button
               key={index}
-              className={landSuccess == "true" ? "select" : "btn"}
+              className={landSuccess == success.id ? "select" : "btn"}
               id="true"
               onClick={() => {
                 landFilter(success.type);
-                setlandSuccess("true");
+                setlandSuccess(success.id);
               }}
             >
               {success.type}
