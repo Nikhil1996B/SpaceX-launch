@@ -156,7 +156,7 @@ ul {
 /* Desktop-view view */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .launch-program-list-item {
-    flex: 40%;
+    flex: 18%;
   }
   .flightpatchcontent {
     /* margin-left: 40px; */

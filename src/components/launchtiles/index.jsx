@@ -22,32 +22,37 @@ function LaunchTile({ allLaunch }) {
                 </p>
                 {launches.mission_id.length > 0 ? (
                   <>
-                    <p>Misison Ids:</p>
+                    <p class="fontweight">Misison Ids:</p>
+                    <span class="fontcolor">
                     {launches.mission_id.map((ids) => (
                       <ul>
                         <li key={ids}>{ids}</li>
                       </ul>
                     ))}
+                    </span>
+                    
                   </>
                 ) : null}
                 <p>
-                  <span>Launch Year: </span> {launches.launch_year}
+                  <span class="fontweight">Launch Year: </span> <span class="fontcolor">{launches.launch_year}</span>
                 </p>
                 <p>
-                  <span>Successful Launch: </span>{" "}
-                  {launches.launch_success ? "true" : "false"}
+                  <span class="fontweight">Successful Launch: </span>{" "}
+                  <span class="fontcolor">{launches.launch_success ? "true" : "false"}</span>
+                  
                 </p>
                 {launches.launch_success ? (
                   <p>
-                    <span>Successful Landing: </span>{" "}
-                    {launches.launch_landing ? "true" : "false"}
+                    <span class="fontweight">Successful Landing: </span>{" "}
+                    <span class="fontcolor">{launches.launch_landing ? "true" : "false"}</span>
+                    
                   </p>
                 ) : null}
               </div>
             </div>
           ))
         ) : (
-          <div>No results found matching this filter</div>
+          <div class="fontweight">No results found matching this filter</div>
         )}
       </section>
     </>

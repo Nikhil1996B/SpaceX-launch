@@ -30,7 +30,14 @@
 .flightdescription {
   font-weight: 550;
   color: #00539b;
+  margin: 4px;
 }
 .flightpatchcontent {
   text-align: center;
+}
+.fontweight {
+  font-weight: 550;
+}
+.fontcolor {
+  color: #00539b;
 }
