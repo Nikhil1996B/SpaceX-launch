@@ -107,7 +107,7 @@ ul {
 }
 
 /* Mobile screen */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 699px) {
   .spacex-landing-container {
     display: flex;
     flex-flow: column;
@@ -126,7 +126,7 @@ ul {
 }
 
 /* Tablet view */
-@media screen and (min-width: 700px) and (max-width: 1024px) {
+@media screen and (min-width: 700px) and (max-width: 1023px) {
   .spacex-landing-container {
     display: flex;
     min-height: 80vh;
@@ -145,7 +145,7 @@ ul {
     justify-content: space-around;
   }
   .launch-program-list-item {
-    flex: 40%;
+    flex: 48%;
   }
   .flightpatchcontent {
     text-align: initial;
@@ -156,7 +156,7 @@ ul {
 /* Desktop-view view */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .launch-program-list-item {
-    flex: 18%;
+    flex: 1 0 24%;
   }
   .flightpatchcontent {
     /* margin-left: 40px; */
