@@ -65,6 +65,7 @@ function App() {
   };
 
   const landFilter = (land = "") => {
+    
     setLandType(land);
     console.log(land);
   };
