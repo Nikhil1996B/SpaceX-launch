@@ -70,6 +70,7 @@ function App() {
   };
   return (
     <>
+      <h1>{process.env.REACT_APP_URL}</h1>
       <div className="spacex-landing-container">
         <Filter
           allLaunch={allLaunch}
